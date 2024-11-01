@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Font for website */
+@font-face {
+    font-family: 'General Sans';
+    src: url('/build/fonts/GeneralSans-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010101;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f4ffac;
+  border-radius: 10px;
+  border: 0px none #ffffff;
+}
+
+
+/* Custom classes */
+.groupchat{
+    @apply lg:size-[60px] sm:size-14 flex items-center justify-center bg-thunder rounded-full transition-all duration-375 hover:bg-parchment hover:text-thunder;
+}
+
+.active-gc{
+    @apply bg-parchment text-thunder;
+}
+
+.chat{
+    @apply flex justify-start space-x-3 items-center bg-rangoon rounded-2xl transition-all duration-375 hover:bg-thunder pr-7 pl-5 py-3;
+}
+
+.active-chat{
+    @apply bg-thunder;
+}
+
+.display-none{
+    display: none !important;
+}

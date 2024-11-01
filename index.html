@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth text-[16px]">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Icons and styles -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="build/css/style.css">
+        <!-- Icons and styles -->
+
+        <!-- Theme switch -->
+         <script src="/build/js/themeSwitch.js" defer></script>
+        <!-- Theme switch -->
+
+        <!-- Active links -->
+        <script src="/build/js/activeLinks.js" defer></script>
+        <!-- Active links -->
+
+        <title>LoopSpace</title>
+    </head>
+    <body class="min-h-screen w-full flex flex-col-reverse lg:flex-row justify-center overflow-x-hidden bg-black text-white transition-all duration-375 p-5">
+        <nav id="sidebar" class="w-full lg:w-24 flex flex-row lg:flex-col items-center justify-between bg-white dark:bg-rangoon rounded-3xl px-4 py-5">
+            <a href="javascript:;" class="flex items-center justify-center lg:mb-8">
+                <img src="/build/img/main-icon.png" alt="main logo" class="size-[60px] bg-parchment rounded-full">
+            </a>
+            <div id="groups-explore" class="w-full flex flex-1 flex-row lg:flex-col justify-start items-center space-x-3 lg:space-x-0 lg:space-y-3 lg:mb-72">
+                <a href="javascript:;" class="groupchat">
+                    <p>Work</p>
+                </a>
+                <a href="javascript:;" class="groupchat">
+                    <p>ICG</p>
+                </a>
+                <a href="javascript:;" class="groupchat">
+                    <p>SP</p>
+                </a>
+                <a href="javascript:;" class="groupchat">
+                    <p>BFF</p>
+                </a>
+                <a href="javascript:;" class="groupchat">
+                    <p>MJ</p>
+                </a>
+                <a href="javascript:;" class="groupchat">
+                    <p>GI</p>
+                </a>
+                <a href="javascript:;" id="explore" class="groupchat text-parchment text-3xl">
+                    <i class='bx bxs-compass'></i>
+                </a>
+            </div>
+            <a href="javascript:;" id="create" class="groupchat text-parchment text-3xl">
+                <i class='bx bx-plus'></i>
+            </a>
+        </nav>
+        <div id="chats-wrapper" class="w-[276px] flex flex-col justify-start space-y-[13.5px] mx-4 overflow-y-visible">
+            <a href="javascript:;" id="richard" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/richard.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Richard Wilson</h3>
+                    <p class="text-[0.7rem]">I will add you to our team, we...</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="ic-chat" class="chat active-chat">
+                <div class="account relative">
+                    <div class="groupchat !size-[52px] !bg-parchment !text-black font-medium">
+                        <p>IC</p>
+                    </div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">ICG chat</h3>
+                    <p class="text-[0.7rem]">Jaden: Let's discuss this tom...</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="sarah" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/sarah.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Sarah Parker</h3>
+                    <p class="text-[0.7rem]">You: OK, see you soon!</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="abubakar" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/abubakar.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Abubakar Campbell</h3>
+                    <p class="text-[0.7rem]">You: Do you think we can do it?</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="nathanael" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/nathanael.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Nathanael Jordan</h3>
+                    <p class="text-[0.7rem]">I'm busy</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="conner" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/conner.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Conner Garcia</h3>
+                    <p class="text-[0.7rem]">You: Hey, maybe we can meet...</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="cynthia" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/cynthia.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Cynthia McKay</h3>
+                    <p class="text-[0.7rem]">You: Maybe</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="cora" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/cora.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Cora Richards</h3>
+                    <p class="text-[0.7rem]">Will you go play?</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="lawrence" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/lawrence.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Lawrence Patterson</h3>
+                    <p class="text-[0.7rem]">I'll ask the guys what they think</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="jaden" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/jaden.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Jaden Parker</h3>
+                    <p class="text-[0.7rem]">You: We can try this strategy I...</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="alia" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/alia.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Alia Bonner</h3>
+                    <p class="text-[0.7rem]">Had a great time yesterday</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="fletcher" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/fletcher.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Fletcher Morse</h3>
+                    <p class="text-[0.7rem]">You: I need to work, sorry</p>
+                </div>
+            </a>
+            <a href="javascript:;" id="maya" class="chat">
+                <div class="account relative">
+                    <img src="/build/img/profiles/maya.jpg" alt="" class="size-[52px] rounded-full">
+                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                </div>
+                <div class="name flex flex-col space-y-0.5">
+                    <h3 class="text-[1.05rem] font-medium">Maya Sullivan</h3>
+                    <p class="text-[0.7rem]">what have you been up to</p>
+                </div>
+            </a>
+        </div>
+        <main class="flex flex-1 flex-col items-center">
+            <header class="w-full flex justify-between">
+                <h1 id="chat-name" class="text-[2.5rem] font-semibold">ICG chat</h1>
+                <div id="user-controls" class="flex items-center space-x-5">
+                    <div id="search-wrapper" class="relative">
+                        <input type="text" name="search" placeholder="Search..." autocomplete="off" id="search" class="h-12 w-64 bg-rangoon text-white outline-none border border-white/[.5] rounded-full transition-all duration-375 focus:shadow-[0px_0px_20px_0px_rgba(244,_255,_172,_0.5)] pl-[52px]">
+                        <i class='h-full flex items-center bx bx-search text-[1.5rem] absolute left-4 top-0'></i>
+                    </div>
+                    <a href="javascript:;" id="settings" class="size-12 bg-thunder flex items-center justify-center rounded-full transition-all duration-375 hover:animate-spin hover:bg-parchment hover:text-black">
+                        <i class='bx bxs-cog text-[1.5rem]'></i>
+                    </a>
+                    <a href="javascript:;" id="notifications" class="size-12 bg-thunder flex items-center justify-center rounded-full transition-all duration-375 hover:animate-wiggle hover:bg-parchment hover:text-black">
+                        <i class='bx bxs-bell text-[1.5rem]'></i>
+                    </a>
+                    <div class="account relative">
+                        <a href="#">
+                            <img src="/build/img/pfp.jpg" alt="main profile picture" class="size-[52px] rounded-full">
+                        </a>
+                        <div class="status size-5 rounded-full bg-parchment border-4 border-black absolute bottom-0 right-0"></div>
+                    </div>
+                    <button class="size-12 md:flex items-center justify-center bg-thunder rounded-full text-[1.5rem]" id="theme-switch">
+                        <i class="bx bxs-moon moon-icon cursor-pointer transition-all duration-500"></i>
+                        <i class="bx bxs-sun sun-icon cursor-pointer transition-all duration-500"></i>
+                    </button>
+                </div>
+            </header>
+            <div id="server-wrapper" class="w-full flex items-center space-x-4 mt-5">
+                <div id="chat-wrapper" class="h-full w-2/3 flex flex-col justify-start space-y-5 bg-rangoon rounded-3xl p-5">
+                    <img src="/build/img/banner.jpg" alt="banner" class="w-full h-[236px] object-cover rounded-2xl">
+                    <div id="yesterday" class="w-full">
+                        <h1 class="date w-28 h-9 flex justify-center items-center bg-thunder text-[0.85rem] font-medium rounded-full mb-5 relative inset-0 mx-auto">9 Sep 2024</h1>
+                        <div id="added" class="w-full flex items-center justify-between mb-5">
+                            <h4 class="font-semibold flex items-center"><i class='bx bx-right-arrow-alt flex flex-row items-center text-[1.75rem] pr-4'></i> Richard Wilson <span class="font-normal px-1">added</span> You</h4>
+                            <h5 class="timestamp text-[0.9rem]">6:15 PM</h5>
+                        </div>
+                        <div class="message w-full flex space-x-3">
+                            <div class="h-fit account relative">
+                                <img src="/build/img/profiles/conner.jpg" alt="" class="size-[52px] rounded-full">
+                                <div class="status size-5 rounded-full bg-parchment border-4 border-thunder absolute bottom-0 right-0"></div>
+                            </div>
+                            <div class="message-content flex flex-1 flex-col space-y-2">
+                                <h3 class="font-semibold">Conner Garcia</h3>
+                                <p>Hey guys! Don't forget about our meeting next week! I'll be waiting for you at the 'Cozy Corner' cafe at 6:00 PM. Don't be late!</p>
+                            </div>
+                            <h5 class="timestamp text-[0.9rem]">6:25 PM</h5>
+                        </div>
+                        <div class="message w-full flex space-x-3 mt-7">
+                            <div class="h-fit account relative">
+                                <img src="/build/img/profiles/richard.jpg" alt="" class="size-[52px] rounded-full">
+                                <div class="status size-5 rounded-full bg-parchment border-4 border-thunder absolute bottom-0 right-0"></div>
+                            </div>
+                            <div class="message-content flex flex-1 flex-col space-y-2">
+                                <h3 class="font-semibold">Richard Wilson</h3>
+                                <p>Absolutely, I'll be there! Looking forward to catching up and discussing everything.</p>
+                            </div>
+                            <h5 class="timestamp text-[0.9rem]">6:25 PM</h5>
+                        </div>
+                    </div>
+                    <div id="today" class="w-full">
+                        <h1 class="date w-28 h-9 flex justify-center items-center bg-thunder text-[0.85rem] font-medium rounded-full mb-5 relative inset-0 mx-auto">10 Sep 2024</h1>
+                        <div class="message w-full flex justify-start space-x-3">
+                            <div class="h-fit account relative">
+                                <img src="/build/img/profiles/lawrence.jpg" alt="" class="size-[52px] rounded-full">
+                                <div class="status size-5 rounded-full bg-parchment border-4 border-thunder absolute bottom-0 right-0"></div>
+                            </div>
+                            <div class="message-content flex flex-1 flex-col space-y-2">
+                                <h3 class="font-semibold">Lawrence Patterson</h3>
+                                <p>
+                                    <a href="javascript:;" class="text-parchment rounded-md hover:bg-parchment hover:text-black">@rwilson</a> 
+                                    <a href="javascript:;" class="text-parchment rounded-md hover:bg-parchment hover:text-black">@jparker</a> 
+                                    I have a new game plan
+                                </p>
+                            </div>
+                            <h5 class="timestamp text-[0.9rem]">6:25 PM</h5>
+                        </div>
+                        <div class="message w-full flex space-x-3 mt-7">
+                            <div class="h-fit account relative">
+                                <img src="/build/img/profiles/jaden.jpg" alt="" class="size-[52px] rounded-full">
+                                <div class="status size-5 rounded-full bg-parchment border-4 border-thunder absolute bottom-0 right-0"></div>
+                            </div>
+                            <div class="message-content flex flex-1 flex-col space-y-2">
+                                <h3 class="font-semibold">Jaden Parker</h3>
+                                <p>Let's discuss this tomorrow</p>
+                            </div>
+                            <h5 class="timestamp text-[0.9rem]">6:25 PM</h5>
+                        </div>
+                    </div>
+                    <div id="next-day" class="w-full">
+                        <h1 class="date w-28 h-9 flex justify-center items-center bg-thunder text-[0.85rem] font-medium rounded-full mb-5 relative inset-0 mx-auto">11 Sep 2024</h1>
+                        <div class="message w-full flex justify-start space-x-3">
+                            <div class="h-fit account relative">
+                                <img src="/build/img/pfp.jpg" alt="" class="size-[52px] rounded-full">
+                                <div class="status size-5 rounded-full bg-parchment border-4 border-thunder absolute bottom-0 right-0"></div>
+                            </div>
+                            <div class="message-content flex flex-1 flex-col space-y-2">
+                                <h3 class="font-semibold">You</h3>
+                                <p>
+                                    Wanna hit a game on Elder Ring?
+                                </p>
+                            </div>
+                            <h5 class="timestamp text-[0.9rem]">8:30 PM</h5>
+                        </div>
+                    </div>
+                    <div id="vc-prompt" class="w-full flex items-center justify-between">
+                        <h4 class="flex items-center"><i class='bx bx-phone-call flex flex-row items-center text-[1.75rem] pr-4'></i> <span class="font-semibold px-1">Richard Wilson</span> started a video call</h4>
+                        <button class="w-[104px] h-9 bg-parchment text-black font-medium rounded-full transition-all duration-375 hover:bg-thunder hover:text-parchment">Join</button>
+                    </div>
+                    <div id="message-prompt-wrapper" class="w-full flex justify-center relative">
+                        <a href="javascript:;" class='bx bx-paperclip text-[1.75rem] -rotate-45 absolute left-4 top-1/2 -translate-y-1/2'></a>
+                        <input type="text" placeholder="Write a message..." autocomplete="off" id="message-prompt" class="w-full h-[60px] break-all bg-thunder outline-none rounded-3xl pl-14 pr-28">
+                        <a href="javascript:;" class='bx bx-sticker text-[1.75rem] rotate-90 absolute right-16 top-1/2 -translate-y-1/2'></a>
+                        <a href="javascript:;" class='bx bx-send text-[1.75rem] -rotate-45 absolute right-5 top-[40%] -translate-y-[40%]'></a>
+                    </div>
+                </div>
+                <div id="server-details" class="h-full w-1/3 flex flex-col justify-between items-center space-y-5">
+                    <div id="server-actions" class="w-full flex justify-center space-x-5 bg-rangoon rounded-3xl py-5">
+                        <a href="javascript:;" id="call" class="bx bx-phone-call size-12 flex items-center justify-center bg-parchment text-black text-[1.5rem] rounded-full">
+                        </a>
+                        <a href="javascript:;" id="video" class="bx bx-video size-12 bg-thunder text-[1.5rem] flex items-center justify-center rounded-full transition-all duration-375 hover:bg-parchment hover:text-black"></a>
+                        <a href="javascript:;" id="pin" class="bx bx-pin size-12 flex items-center justify-center bg-thunder text-[1.5rem] rounded-full transition-all duration-375 hover:bg-parchment hover:text-black"></a>
+                        <a href="javascript:;" id="users" class="bx bx-user size-12 bg-thunder text-[1.5rem] flex items-center justify-center rounded-full transition-all duration-375 hover:bg-parchment hover:text-black"></a>
+                    </div>
+                    <div id="members" class="w-full flex flex-col space-y-6 bg-rangoon rounded-3xl p-6">
+                        <h2 class="text-[1.5rem] font-semibold">Members</h2>
+                        <div class="member w-full flex items-center justify-between">
+                            <div class="name w-full flex items-center space-x-3">
+                                <div class="h-fit avatar relative">
+                                    <img src="/build/img/profiles/richard.jpg" alt="" class="size-[52px] rounded-full">
+                                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                                </div>
+                                <h3>Richard Wilson</h3>
+                            </div>
+                            <h6 class="text-[0.9rem]">Admin</h6>
+                        </div>
+                        <div class="member w-full flex items-center justify-between">
+                            <div class="name w-full flex items-center space-x-3">
+                                <div class="h-fit avatar relative">
+                                    <img src="/build/img/pfp.jpg" alt="" class="size-[52px] rounded-full">
+                                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                                </div>
+                                <h3>You</h3>
+                            </div>
+                        </div>
+                        <div class="member w-full flex items-center justify-between">
+                            <div class="name w-full flex items-center space-x-3">
+                                <div class="h-fit avatar relative">
+                                    <img src="/build/img/profiles/jaden.jpg" alt="" class="size-[52px] rounded-full">
+                                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                                </div>
+                                <h3>Jaden Parker</h3>
+                            </div>
+                        </div>
+                        <div class="member w-full flex items-center justify-between">
+                            <div class="name w-full flex items-center space-x-3">
+                                <div class="h-fit avatar relative">
+                                    <img src="/build/img/profiles/conner.jpg" alt="" class="size-[52px] rounded-full">
+                                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                                </div>
+                                <h3>Conner Garcia</h3>
+                            </div>
+                        </div>
+                        <div class="member w-full flex items-center justify-between">
+                            <div class="name w-full flex items-center space-x-3">
+                                <div class="h-fit avatar relative">
+                                    <img src="/build/img/profiles/lawrence.jpg" alt="" class="size-[52px] rounded-full">
+                                    <div class="status size-5 rounded-full bg-parchment border-4 border-rangoon absolute bottom-0 right-0"></div>
+                                </div>
+                                <h3>Lawrence Patterson</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="files" class="w-full flex flex-col space-y-6 bg-rangoon rounded-3xl p-6">
+                        <h2 class="text-[1.5rem] font-semibold">Files</h2>
+                        <div id="photos" class="w-full flex flex-col space-y-6">
+                            <a href="javascript:;" class="flex items-center justify-between">
+                                <h4 class="flex items-center"><i class='bx bxs-grid-alt text-[1.65rem] pr-3'></i> 115 photos</h4>
+                                <i class='bx bx-chevron-up'></i>
+                            </a>
+                            <div id="gallery" class="w-full flex items-center space-x-2 overflow-x-scroll pb-3">
+                                <img src="/build/img/banner.jpg" alt="image 1" class="w-56 h-40 rounded-lg">
+                                <img src="/build/img/gallery.png" alt="image 2" class="w-56 h-40 rounded-lg">
+                            </div>
+                        </div>
+                        <a href="javascript:;" id="attachments" class="flex items-center justify-between">
+                            <h4 class="flex items-center"><i class='bx bx-file-blank text-[1.65rem] pr-3'></i> 208 files</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </a>
+                        <a href="javascript:;" id="links" class="flex items-center justify-between">
+                            <h4 class="flex items-center"><i class='bx bx-link text-[1.65rem] pr-3'></i> 47 shared links</h4>
+                            <i class='bx bx-chevron-down'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
