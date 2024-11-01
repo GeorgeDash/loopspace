@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *{
-    outline: 1px solid red;
-} */
+*{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 350ms;
+}
 
 /* Font for website */
 @font-face {
@@ -20,17 +22,18 @@
     width: 10px;
 }
 
-::-webkit-scrollbar-track {
-  background: #010101;
-  border-radius: 10px;
-}
-
 ::-webkit-scrollbar-thumb {
   background-color: #f4ffac;
   border-radius: 10px;
-  border: 0px none #ffffff;
+  border: none;
 }
 
+::-webkit-scrollbar-thumb {
+    background-color: #f4ffac;
+    border-radius: 10px;
+    border: 0px none #ffffff;
+}
+  
 
 /* Custom classes */
 .groupchat{

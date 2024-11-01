@@ -22,12 +22,10 @@ module.exports = {
         "black": "#040404",
         "thunder": "#303030",
         "parchment": "#f4ffac",
-        "rangoon": "#1a1a1a"
+        "rangoon": "#1a1a1a",
+        "lightgray": "#ecf0f3"
       },
       keyframes: {
-        spin: {
-          'to': {transform: 'rotate(360deg)'}
-        },
         wiggle: {
           '0%, 100%': {transform: 'rotate(0deg)'},
           '25%': {transform: 'rotate(-25deg)'},
@@ -35,7 +33,6 @@ module.exports = {
         }
       }, 
       animation: {
-        spin: 'spin 1.5s ease-out 0.1s forwards',
         wiggle: 'wiggle 1.5s ease-out forwards'
       },
       transitionDuration: {
