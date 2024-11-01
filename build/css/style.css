@@ -1305,6 +1305,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.dark\:text-black:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(4 4 4 / var(--tw-text-opacity));
+}
+
 @media (min-width: 320px) {
   .sm\:my-8 {
     margin-top: 2rem;
