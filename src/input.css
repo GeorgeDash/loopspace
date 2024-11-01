@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* *{
+    outline: 1px solid red;
+} */
 
 /* Font for website */
 @font-face {
@@ -39,7 +42,7 @@
 }
 
 .chat{
-    @apply flex justify-start space-x-3 items-center bg-rangoon rounded-2xl transition-all duration-375 hover:bg-thunder pr-7 pl-5 py-3;
+    @apply sm:min-w-[300px] lg:min-w-full flex justify-start space-x-3 items-center bg-rangoon rounded-2xl transition-all duration-375 hover:bg-thunder pr-7 pl-5 py-3;
 }
 
 .active-chat{
