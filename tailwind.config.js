@@ -19,11 +19,16 @@ module.exports = {
         "sans": ["'General Sans'", "sans-serif"]
       },
       colors: {
+        // Dark mode
         "black": "#040404",
         "thunder": "#303030",
         "parchment": "#f4ffac",
         "rangoon": "#1a1a1a",
-        "lightgray": "#ecf0f3"
+        // Light mode
+        "lightgray": "#ecf0f3",
+        "geyser": "#d2dbe2",
+        "frost": "#eef5cc",
+        "cadet": "#a8b2c1"
       },
       keyframes: {
         wiggle: {
@@ -40,6 +45,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+    }
+  ],
 }
 
